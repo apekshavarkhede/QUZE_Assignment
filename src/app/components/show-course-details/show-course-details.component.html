@@ -1,0 +1,13 @@
+<table id="users">
+    <tr>
+        <th *ngFor="let column of header">
+            {{column}}
+        </th>
+    </tr>
+
+    <tr *ngFor="let row of rows">
+        <td *ngFor="let column of header" style="font-size: 13px; border:black;">
+            {{row[column]}}
+        </td>
+    </tr>
+</table>
