@@ -3,5 +3,17 @@
         <input matInput type="text" fxFlex="55" fxFlex.xs="100" style="font-size: large;" placeholder="Search"
             [(ngModel)]="value">
     </div>
-    
+    <div fxLayout="row" class="matCardDiv" fxLayoutAlign="center start" fxLayoutAlign.xs="start start">
+        <mat-card fxFlex="60" fxFlex.xs="100" fxLayoutAlign="center center" fxLayout="column">
+          <div fxFlex="100%" fxLayout="column">
+            <strong class="courseName" fxLayoutAlign="center center" *ngFor="let item of coursesName">
+              <div fxLayoutAlign="center center" fxLayoutAlign.xs="start start">
+                {{item | uppercase}}
+              </div>
+              <br>
+              <br>
+            </strong>
+          </div>
+        </mat-card>
+      </div>
 </div>
