@@ -1,3 +1,15 @@
-.matCardDiv{
-    margin-top: 15px;
+.matCardDiv {
+  margin-top: 15px;
+}
+
+.courseName {
+  cursor: pointer;
+}
+
+.courseName:hover {
+  background-color: rgb(247, 214, 214);
+}
+
+.moreDetailsButton {
+  margin-top: 10px;
 }

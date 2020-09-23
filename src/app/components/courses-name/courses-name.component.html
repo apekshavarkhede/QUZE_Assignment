@@ -5,15 +5,18 @@
     </div>
     <div fxLayout="row" class="matCardDiv" fxLayoutAlign="center start" fxLayoutAlign.xs="start start">
         <mat-card fxFlex="60" fxFlex.xs="100" fxLayoutAlign="center center" fxLayout="column">
-          <div fxFlex="100%" fxLayout="column">
-            <strong class="courseName" fxLayoutAlign="center center" *ngFor="let item of coursesName |course:value">
-              <div fxLayoutAlign="center center" fxLayoutAlign.xs="start start">
-                {{item | uppercase}}
-              </div>
-              <br>
-              <br>
-            </strong>
-          </div>
+            <div fxFlex="100%" fxLayout="column">
+                <strong class="courseName" fxLayoutAlign="center center" *ngFor="let item of coursesName |course:value">
+                    <div fxLayoutAlign="center center" fxLayoutAlign.xs="start start">
+                        {{item | uppercase}}
+                    </div>
+                    <br>
+                    <br>
+                </strong>
+            </div>
         </mat-card>
-      </div>
+    </div>
+    <div fxLayoutAlign="center center" class="moreDetailsButton">
+        <button mat-raised-button (click)="getDetails()" color="primary">More Details</button>
+    </div>
 </div>

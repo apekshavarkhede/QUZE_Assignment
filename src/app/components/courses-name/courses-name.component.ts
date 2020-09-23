@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { from } from 'rxjs';
 import { HttpService } from 'src/app/service/http.service';
 import {CoursePipe} from '../../pipes/course.pipe'
@@ -10,7 +11,7 @@ import {CoursePipe} from '../../pipes/course.pipe'
 })
 export class CoursesNameComponent implements OnInit {
 
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService,private route: Router) { }
   value = "";
   coursesName: Array<any>
 
@@ -22,6 +23,10 @@ export class CoursesNameComponent implements OnInit {
         this.coursesName.push(item[1].title)
       })
     })
+  }
+
+  getDetails(){
+    this.route.navigate(['details'])
   }
 
   ngOnInit() {
