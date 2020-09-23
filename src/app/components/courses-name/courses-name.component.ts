@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
 import { HttpService } from 'src/app/service/http.service';
+import {CoursePipe} from '../../pipes/course.pipe'
 
 @Component({
   selector: 'app-courses-name',
